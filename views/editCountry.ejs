@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <% include ../views/partials/head.ejs %>
+  </head>
+
+  <body>
+    <h2>Edit <%= country.name %> </h2>
+
+    <form action='/countries/<%=country.id%>?_method=put' method="POST">
+      Country Name:
+      <br/>
+      <input type='text' name='name' class='name' value='<%=country.name%>'/>
+      <br/>
+      Country Flag:
+      <br/>
+      <input type='text' name='flag' class='flag' value='<%=country.flag%>'>
+      <br/>
+      Country Capitol:
+      <br/>
+      <input type='text' name='capitol' class='capitol' value='<%= country.capitol %>'/>
+      <br/>
+      Country Population:
+      <br/>
+      <input type='text' name='population' class='population' value='<%=country.population %>'/>
+      <br/>
+      Country Cities:
+      <br/>
+      <input type='text' name='cities' class='cities' value='<%= country.cities %>' />
+      <br/>
+      <br/>
+      <button type='submit' id='submitCountry'>Edit Country</button>
+    </form>
+    <br/>
+    <button id='deleteCountry'>Delete Country</button>
+    <br/>
+    <button class='goHome' data-url='/'>All Countries</button>
+  </body>
+
+</html>

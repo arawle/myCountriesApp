@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <% include ../views/partials/head.ejs %>
+  </head>
+
+  <body>
+    <h2>Add New Country</h2>
+    <form action='/countries' method="POST">
+      Country Name:
+      <br/>
+      <input type='text' name='name' class='name'/>
+      <br/>
+      Country Flag:
+      <br/>
+      <input type='text' name='flag' class='flag'>
+      <br/>
+      Country Capitol:
+      <br/>
+      <input type='text' name='capitol' class='capitol'/>
+      <br/>
+      Country Population:
+      <br/>
+      <input type='text' name='population' class='population'/>
+      <br/>
+      Country Cities:
+      <br/>
+      <input type='text' name='cities' class='cities' />
+      <br/>
+      <br/>
+      <button type='submit'>Add Country</button>
+    </form>
+
+  </body>
+
+</html>
