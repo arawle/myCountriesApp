@@ -2,12 +2,10 @@
 
 <html>
   <head>
-    <% include ../views/partials/head.ejs %>
+    <% include ../partials/head.ejs %>
   </head>
-
   <body>
     <h2>Edit <%= country.name %> </h2>
-
     <form action='/countries/<%=country.id%>?_method=put' method="POST">
       Country Name:
       <br/>
@@ -37,5 +35,4 @@
     <br/>
     <button class='goHome' data-url='/'>All Countries</button>
   </body>
-
 </html>

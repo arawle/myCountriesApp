@@ -2,17 +2,14 @@
 
 <html>
   <head>
-    <% include ../views/partials/head.ejs %>
+    <% include ../partials/head.ejs %>
   </head>
-
   <body>
     <h2>Countries App</h2>
-
     <button class='newCountry'>Add Country</button>
     <br/>
-
     <% country.forEach(function(country){ %>
-        <div class = 'country'>
+      <div class = 'country'>
         <img src = <%= country.flag %> alt='No Flag Found'/>
         <br/>
         <br/>
@@ -23,17 +20,11 @@
         <br/>
         <b> Population: </b> <%= country.population %>
         <br/>
-        <!-- <b> Cities: </b> <ul> <%country.cities.forEach(function(city){%>
-          <li> <%=city%> </li>
-        <%})%>
-        </ul> -->
         <br/>
         <button class='editCountry' data-url='/countries/<%= country.id %>'>Edit Country</button>
         <br/>
         <button class='deleteCountry' data-url='/countries/<%= country.id %>'>Delete Country</button>
-        </div>
-     <% }) %>
-
+      </div>
+    <% }) %>
   </body>
-
 </html>
